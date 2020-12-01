@@ -25,7 +25,7 @@ DATABASE_URL="postgresql://__USER__:__PASSWORD__@__HOST__:__PORT__/__DATABASE__"
 npx prisma migrate save --experimental --name "init"
 npx prisma migrate up --experimental
 heroku config:set NPM_CONFIG_LOGLEVEL=verbose 
-git push heroku master
+git push heroku main
 ```
 
 If you look at the build log you will see that the postinstall hook for `@prisma/client` is run. This generates a sudo package in `node_modules/.prisma/client/xx`. 
