@@ -31,6 +31,8 @@ git push heroku main
 If you look at the build log you will see that the postinstall hook for `@prisma/client` is run. This generates a sudo package in `node_modules/.prisma/client/xx`. 
 
 ![build log](./build-log.png)
+And I have created a postinstall hook which shows that `.prisma` is indeed generated in node_modules.
+![postinstall log](./postinstall.png)
 
 When the application is then started `.prisma` can not be found. 
 
