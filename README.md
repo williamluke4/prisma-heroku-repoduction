@@ -1,7 +1,5 @@
 # Prisma-Heroku Postinstall Reproduction
 
-[Deployment guide](https://www.prisma.io/docs/guides/deployment/deploying-to-heroku)
-
 ## How to Reproduce
 
 ```bash
@@ -31,4 +29,9 @@ git push heroku master
 ```
 
 If you look at the build log you will see that the postinstall hook for `@prisma/client` is run. This generates a sudo package in `node_modules/.prisma/client/xx`. 
+
+![build log](./build-log.png)
+
 When the application is then started `.prisma` can not be found. 
+
+For more information about the deployment you may look at this [guide](https://www.prisma.io/docs/guides/deployment/deploying-to-heroku)
