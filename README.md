@@ -28,12 +28,13 @@ heroku config:set NPM_CONFIG_LOGLEVEL=verbose
 git push heroku main
 ```
 
-If you look at the build log you will see that the postinstall hook for `@prisma/client` is run. This generates a sudo package in `node_modules/.prisma/client/xx`. 
+If you look at the build log you will see that the postinstall hook for `@prisma/client` is run. This initializes a sudo package in `node_modules/.prisma/client/xx`. 
 
 ![build log](./build-log.png)
-And I have created a postinstall hook which shows that `.prisma` is indeed generated in node_modules.
-![postinstall log](./postinstall.png)
 
-When the application is then started `.prisma` can not be found. 
+I created a postinstall hook that shows that even though `@prisma/client` postinstall is called, `.prisma/client` is not initialized.
+
+![postinstall log](./heroku_not_initializing.png)
+
 
 For more information about the deployment you may look at this [guide](https://www.prisma.io/docs/guides/deployment/deploying-to-heroku)
