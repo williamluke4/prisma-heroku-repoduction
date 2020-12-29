@@ -38,3 +38,5 @@ I created a postinstall hook that shows that even though `@prisma/client` postin
 
 
 For more information about the deployment you may look at this [guide](https://www.prisma.io/docs/guides/deployment/deploying-to-heroku)
+
+- 2.12.1 Working
