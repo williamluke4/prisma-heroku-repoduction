@@ -3,6 +3,8 @@
 ## How to Reproduce
 
 ```bash
+git clone https://github.com/williamluke4/prisma-heroku-repoduction.git
+cd prisma-heroku-repoduction
 rm -rf ./.git
 git init
 git add . 
